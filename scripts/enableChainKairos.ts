@@ -16,8 +16,8 @@ async function main() {
   const CrosschainNFT = await ethers.getContractFactory("CrosschainNFT", signer);
 
   // Contract addresses and parameters 
-  const crosschainNFTAddressKairosTestnet = `0x7dCdaa882603b1CfEEE42D1c382a1EcBA595d87c`;
-  const crosschainNFTAddressEthereumSepolia = `0xECDC15B68887211C9D5156D60A69BFcd69DFc6fC`;
+  const crosschainNFTAddressKairosTestnet = `0x8c464Bb9Bf364F68b898ed0708b8f5F66EF6Cfb1`;
+  const crosschainNFTAddressEthereumSepolia = `0xb1fe42BBd7842703820C7480c22409b872319B22`;
   const chainSelectorEthereumSepolia = `16015286601757825753`;
   const ccipExtraArgs = `0x97a657c9000000000000000000000000000000000000000000000000000000000007A120`;
 

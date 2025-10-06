@@ -46,11 +46,7 @@ contract CrosschainNFT is ERC721, ERC721URIStorage, ERC721Burnable, IAny2EVMMess
 
     uint256 constant ETHEREUM_SEPOLIA_CHAIN_ID = 11155111;
 
-    string[] characters = [
-        "https://disastrous-turquoise-parakeet.myfilebase.com/ipfs/QmSUpFfW674cKDubqk5MNzcEMYH94VDD86HfXV8Srf1nAv",
-        "https://disastrous-turquoise-parakeet.myfilebase.com/ipfs/QmeX3hKqbr1FRJS2a4Sf9GTvJitgXZKAiLgBg4y3Z8LXg6",
-        "https://disastrous-turquoise-parakeet.myfilebase.com/ipfs/QmY1LZF8JHo2r3h4X5VzLLXtJujqnBFGTyo2aqR9joXnt8"
-    ];
+    string tokenNFTURI = "https://disastrous-turquoise-parakeet.myfilebase.com/ipfs/QmY1LZF8JHo2r3h4X5VzLLXtJujqnBFGTyo2aqR9joXnt8";
 
     IRouterClient internal immutable i_ccipRouter;
     LinkTokenInterface internal immutable i_linkToken;
@@ -115,9 +111,8 @@ contract CrosschainNFT is ERC721, ERC721URIStorage, ERC721Burnable, IAny2EVMMess
 
     function mint() external onlyOnEthereumSepolia {
         uint256 tokenId = _nextTokenId++;
-        string memory uri = characters[tokenId % characters.length];
         _safeMint(msg.sender, tokenId);
-        _setTokenURI(tokenId, uri);
+        _setTokenURI(tokenId, tokenNFTURI);
     }
 
     function enableChain(uint64 chainSelector, address crosschainNFTAddress, bytes memory ccipExtraArgs)

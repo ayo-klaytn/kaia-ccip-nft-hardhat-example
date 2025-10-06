@@ -1,4 +1,4 @@
-// scripts/crossChainTransfer.ts
+// scripts/crossChainTransferNFT.ts
 
 import { network } from "hardhat";
 
@@ -23,7 +23,7 @@ async function main() {
   // Get the contract factory
   const CrosschainNFT = await ethers.getContractFactory("CrosschainNFT", signer);
 
-  const crosschainNFTAddressEthereumSepolia = `0xECDC15B68887211C9D5156D60A69BFcd69DFc6fC`;
+  const crosschainNFTAddressEthereumSepolia = `0xb1fe42BBd7842703820C7480c22409b872319B22`;
 
   // Transfer parameters
   const from = `0x7b467A6962bE0ac80784F131049A25CDE27d62Fb`;

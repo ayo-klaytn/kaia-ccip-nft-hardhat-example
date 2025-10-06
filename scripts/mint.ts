@@ -23,7 +23,7 @@ if (connection.networkName !== "ethereumSepolia") {
   const CrosschainNFT = await ethers.getContractFactory("CrosschainNFT", signer);
 
 
-  const crosschainNFTAddressEthereumSepolia = `0xECDC15B68887211C9D5156D60A69BFcd69DFc6fC`
+  const crosschainNFTAddressEthereumSepolia = `0xb1fe42BBd7842703820C7480c22409b872319B22`
 
   // Attach to the deployed contract
   const crosschainNFT = CrosschainNFT.attach(crosschainNFTAddressEthereumSepolia);
